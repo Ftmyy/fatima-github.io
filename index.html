@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>30MFF Website</title>
+        <link rel="stylesheet" href="./style.css"> <!--to connect with the css style tab-->
+     
+    
+    <style> 
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }  
+    
+        video {
+            display: none;
+            margin: 0 auto;
+            max-width: 70%;
+            height:auto;
+        }  
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color:rgb(255, 255, 255);
+            color:rgb(98, 126, 111);
+            text-align:center;
+            border-radius 6px;
+            padding: 10px;
+            position: absolute;
+            z-index: 1;
+            top: 125%;
+            left:50%;
+            transform: translateX(-50%);
+            opacity:0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility:visible;
+            opacity:1;
+        }
+    </style> 
+    </head>
+    
+          
+        </div>
+        <div class="hero">
+            <div class="container">
+                <div class="header">
+                    <p class="left-corner">Communications Lab </p>
+                    <p class="right-corner"> Fatima Alsuwaidi</p>
+                </div>
+                <h1 style="font-size:60px;">Sounds of NYUad</h1>
+                <h2>30MFF</h3>
+                 <!--header and title, which is connected to the css tab-->
+            
+            </div>
+        </div>
+        <div class="tooltip">
+            <p style="color:rgb(98, 126, 111); font-size: 20px; font-family:Georgia, 'Times New Roman', Times, serif;" class="left-corner">----------------------------------------------------------------------------     About My Film     --------------------------------------------------------------------------</p>
+            <span class="tooltiptext">I created a movie composed of various clips showcasing the Nyuad campus. The film's primary emphasis lies on capturing the captivating sounds that encompass the campus environment; birds chirping, wind rustling through trees, cars passing by, and the bustling presence of people, among others.</span>
+        </span>
+        </div>
+
+    
+        <button onclick="toggleVideo()" style="margin: 50px; background-color: rgb(125, 160, 140); color:white; padding: 15px; font-family: 'Times New Roman', Times, serif; font-size:30px;">The Film</button> 
+
+        <video id="myVideo" controls> <!--size of the film-->
+            <source src="img/movie.mp4" type="video/mp4"></video> <!--source of the film-->
+
+        <script> <!--javascript-->
+            function toggleVideo() {
+                var video = document.getElementById("myVideo");
+                if (video.style.display === "none") {
+                    video.style.display = "block";
+                    video.play(); <!--start playing the video-->
+                } else {
+                    video.style.display = "none";
+                    video.pause(); <!--pause the video-->
+                }
+            }
+        </script> <!--to have the button work, and display the video, as well as have the video play once the button is cliked, 
+        and have the video pause when you click the button again-->
+  
+</body>  
+</html>
